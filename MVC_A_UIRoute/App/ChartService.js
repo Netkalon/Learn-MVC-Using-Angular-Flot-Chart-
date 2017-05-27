@@ -55,6 +55,7 @@ angular.module('chart')
             }
         });
 
+
         vm['bar-stacked'] = angular.extend({}, vm['default'], {
             series: {
                 bars: {
