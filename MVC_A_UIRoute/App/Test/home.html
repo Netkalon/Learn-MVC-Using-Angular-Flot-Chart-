@@ -1,0 +1,63 @@
+
+
+<div class="jumbotron text-center">
+    <h1>AngularJS Flot Chart</h1>
+    </div>
+    <div ng-controller="ChartController">
+        <!-- START row-->
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">Area</div>
+                    </div>
+                    <div class="panel-body">
+                        <flot datalist="'server/chart/area.json'" options="chartAreaFlotChart" series="{'lines': areaSeries}"></flot>
+                        <div class="text-center mt-lg">
+
+                            <input type="checkbox" id="input10" ng-model="areaSeries[0]" />
+                            <label for="input10">
+                                <strong>2017</strong>
+                            </label>
+
+                            <input type="checkbox" id="input11" ng-model="areaSeries[1]" />
+                            <label for="input11">
+                                <strong>2016</strong>
+                            </label>
+
+                            <input type="checkbox" id="input12" ng-model="areaSeries[2]" />
+                            <label for="input12">
+                                <strong>2015</strong>
+                            </label>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">Bar</div>
+                    </div>
+                    <div class="panel-body">
+                        <flot datalist="'server/chart/bar.json'" options="chartBarFlotChart"></flot>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">Stacked Bars</div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="indicator show">
+                            <span class="spinner"></span>
+                        </div>
+                        <flot datalist="'server/chart/barstacked.json'" options="chartBarStackedFlotChart"></flot>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END row-->
+
+    </div>
